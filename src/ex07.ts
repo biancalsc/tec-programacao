@@ -6,8 +6,14 @@ class Ponto {
         this.x = x;
         this.y = y;
     }
+
     distancia(ponto:Ponto):number{
-        return this.x - this.y;
+        let dx = ponto.x - this.x;
+        let dy = ponto.y - this.y;
+        dx = dx ** 2;
+        dy = dy ** 2;
+
+        return Math.sqrt(dx + dy);
     }
 }
 
